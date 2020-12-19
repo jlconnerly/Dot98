@@ -30,7 +30,7 @@
                     <navigationItem key="navigationItem" id="SUy-cD-E30">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="uZZ-Jj-PHy">
                             <connections>
-                                <segue destination="uc5-dc-EJ5" kind="show" id="22L-YJ-62v"/>
+                                <segue destination="AOt-et-Mpi" kind="show" id="22L-YJ-62v"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -57,15 +57,55 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="93.75"/>
         </scene>
-        <!--SideMenu-->
-        <scene sceneID="L2Q-Og-uCT">
+        <!--View Controller-->
+        <scene sceneID="MUC-oR-x8s">
             <objects>
-                <viewControllerPlaceholder storyboardName="SideMenu" id="uc5-dc-EJ5" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Sxq-hw-hnR"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g3L-WN-d6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="dC3-l8-nTu" customClass="ViewController" customModule="Dot98" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NVe-xv-xLS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OHt-q2-cjs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZeX-Cj-7te"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OHt-q2-cjs" secondAttribute="bottom" id="D5f-OL-ydI"/>
+                            <constraint firstItem="OHt-q2-cjs" firstAttribute="top" secondItem="ZeX-Cj-7te" secondAttribute="top" id="GSP-C3-gmw"/>
+                            <constraint firstItem="OHt-q2-cjs" firstAttribute="leading" secondItem="ZeX-Cj-7te" secondAttribute="leading" id="YXg-Dz-rqI"/>
+                            <constraint firstItem="OHt-q2-cjs" firstAttribute="trailing" secondItem="ZeX-Cj-7te" secondAttribute="trailing" id="bQN-3e-49u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wg1-ZE-eZM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsg-wu-Kvw" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="-179"/>
+            <point key="canvasLocation" x="957.97101449275374" y="-672.32142857142856"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="VDX-Zs-wga">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AOt-et-Mpi" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="qX1-Ck-upU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vwB-Be-nKj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="dC3-l8-nTu" kind="relationship" relationship="rootViewController" id="Rrh-5c-a9n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x22-d7-WnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="-672"/>
         </scene>
     </scenes>
     <resources>

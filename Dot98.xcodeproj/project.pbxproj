@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		329FE1BC258D7B0100E78E35 /* Dot98UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1BB258D7B0100E78E35 /* Dot98UITests.swift */; };
 		329FE1CD258D7B3100E78E35 /* chapter1.json in Resources */ = {isa = PBXBuildFile; fileRef = 329FE1CC258D7B3100E78E35 /* chapter1.json */; };
 		329FE1DE258D7C1300E78E35 /* ChapterOneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1DD258D7C1300E78E35 /* ChapterOneModel.swift */; };
+		329FE1E3258D82D100E78E35 /* SideMenuviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1E2258D82D100E78E35 /* SideMenuviewController.swift */; };
+		329FE1EE258D840500E78E35 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 329FE1ED258D840500E78E35 /* SideMenu */; };
+		329FE1F4258D876700E78E35 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329FE1F2258D876700E78E35 /* SideMenu.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,8 @@
 		329FE1BD258D7B0100E78E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		329FE1CC258D7B3100E78E35 /* chapter1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapter1.json; sourceTree = "<group>"; };
 		329FE1DD258D7C1300E78E35 /* ChapterOneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterOneModel.swift; sourceTree = "<group>"; };
+		329FE1E2258D82D100E78E35 /* SideMenuviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuviewController.swift; sourceTree = "<group>"; };
+		329FE1F3258D876700E78E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Dot98/Storyboards/Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				329FE1EE258D840500E78E35 /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,11 +109,11 @@
 		329FE198258D7B0000E78E35 /* Dot98 */ = {
 			isa = PBXGroup;
 			children = (
-				329FE19D258D7B0000E78E35 /* ViewController.swift */,
+				329FE1E7258D82D600E78E35 /* Models */,
+				329FE1E8258D82E400E78E35 /* ViewControllers */,
 				329FE1D6258D7B7F00E78E35 /* Storyboards */,
 				329FE1D1258D7B4100E78E35 /* ChapterJSON */,
 				329FE1D2258D7B6500E78E35 /* Resources */,
-				329FE1DD258D7C1300E78E35 /* ChapterOneModel.swift */,
 			);
 			path = Dot98;
 			sourceTree = "<group>";
@@ -153,9 +159,27 @@
 			isa = PBXGroup;
 			children = (
 				329FE19F258D7B0000E78E35 /* Main.storyboard */,
+				329FE1F2258D876700E78E35 /* SideMenu.storyboard */,
 				329FE1A4258D7B0100E78E35 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		329FE1E7258D82D600E78E35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				329FE1DD258D7C1300E78E35 /* ChapterOneModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		329FE1E8258D82E400E78E35 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				329FE19D258D7B0000E78E35 /* ViewController.swift */,
+				329FE1E2258D82D100E78E35 /* SideMenuviewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +198,9 @@
 			dependencies = (
 			);
 			name = Dot98;
+			packageProductDependencies = (
+				329FE1ED258D840500E78E35 /* SideMenu */,
+			);
 			productName = Dot98;
 			productReference = 329FE196258D7B0000E78E35 /* Dot98.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +272,9 @@
 				Base,
 			);
 			mainGroup = 329FE18D258D7B0000E78E35;
+			packageReferences = (
+				329FE1EC258D840500E78E35 /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 329FE197258D7B0000E78E35 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				329FE1A6258D7B0100E78E35 /* LaunchScreen.storyboard in Resources */,
+				329FE1F4258D876700E78E35 /* SideMenu.storyboard in Resources */,
 				329FE1CD258D7B3100E78E35 /* chapter1.json in Resources */,
 				329FE1A3258D7B0100E78E35 /* Assets.xcassets in Resources */,
 				329FE1A1258D7B0000E78E35 /* Main.storyboard in Resources */,
@@ -291,6 +322,7 @@
 			files = (
 				329FE19E258D7B0000E78E35 /* ViewController.swift in Sources */,
 				329FE19A258D7B0000E78E35 /* AppDelegate.swift in Sources */,
+				329FE1E3258D82D100E78E35 /* SideMenuviewController.swift in Sources */,
 				329FE1DE258D7C1300E78E35 /* ChapterOneModel.swift in Sources */,
 				329FE19C258D7B0000E78E35 /* SceneDelegate.swift in Sources */,
 			);
@@ -342,6 +374,14 @@
 				329FE1A5258D7B0100E78E35 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		329FE1F2258D876700E78E35 /* SideMenu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				329FE1F3258D876700E78E35 /* Base */,
+			);
+			name = SideMenu.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -625,6 +665,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		329FE1EC258D840500E78E35 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		329FE1ED258D840500E78E35 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 329FE1EC258D840500E78E35 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 329FE18E258D7B0000E78E35 /* Project object */;
 }
