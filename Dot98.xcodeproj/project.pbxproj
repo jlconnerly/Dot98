@@ -17,9 +17,10 @@
 		329FE1BC258D7B0100E78E35 /* Dot98UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1BB258D7B0100E78E35 /* Dot98UITests.swift */; };
 		329FE1CD258D7B3100E78E35 /* chapter1.json in Resources */ = {isa = PBXBuildFile; fileRef = 329FE1CC258D7B3100E78E35 /* chapter1.json */; };
 		329FE1DE258D7C1300E78E35 /* ChapterOneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1DD258D7C1300E78E35 /* ChapterOneModel.swift */; };
-		329FE1E3258D82D100E78E35 /* SideMenuviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1E2258D82D100E78E35 /* SideMenuviewController.swift */; };
 		329FE1EE258D840500E78E35 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 329FE1ED258D840500E78E35 /* SideMenu */; };
 		329FE1F4258D876700E78E35 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329FE1F2258D876700E78E35 /* SideMenu.storyboard */; };
+		329FE1FC258D886E00E78E35 /* ChapterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1FB258D886E00E78E35 /* ChapterController.swift */; };
+		329FE207258D8B1C00E78E35 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE206258D8B1C00E78E35 /* SideMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,9 @@
 		329FE1BD258D7B0100E78E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		329FE1CC258D7B3100E78E35 /* chapter1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapter1.json; sourceTree = "<group>"; };
 		329FE1DD258D7C1300E78E35 /* ChapterOneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterOneModel.swift; sourceTree = "<group>"; };
-		329FE1E2258D82D100E78E35 /* SideMenuviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuviewController.swift; sourceTree = "<group>"; };
 		329FE1F3258D876700E78E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Dot98/Storyboards/Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
+		329FE1FB258D886E00E78E35 /* ChapterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterController.swift; sourceTree = "<group>"; };
+		329FE206258D8B1C00E78E35 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				329FE1D6258D7B7F00E78E35 /* Storyboards */,
 				329FE1D1258D7B4100E78E35 /* ChapterJSON */,
 				329FE1D2258D7B6500E78E35 /* Resources */,
+				329FE1FB258D886E00E78E35 /* ChapterController.swift */,
 			);
 			path = Dot98;
 			sourceTree = "<group>";
@@ -177,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				329FE19D258D7B0000E78E35 /* ViewController.swift */,
-				329FE1E2258D82D100E78E35 /* SideMenuviewController.swift */,
+				329FE206258D8B1C00E78E35 /* SideMenuTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -321,8 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				329FE19E258D7B0000E78E35 /* ViewController.swift in Sources */,
+				329FE207258D8B1C00E78E35 /* SideMenuTableViewController.swift in Sources */,
+				329FE1FC258D886E00E78E35 /* ChapterController.swift in Sources */,
 				329FE19A258D7B0000E78E35 /* AppDelegate.swift in Sources */,
-				329FE1E3258D82D100E78E35 /* SideMenuviewController.swift in Sources */,
 				329FE1DE258D7C1300E78E35 /* ChapterOneModel.swift in Sources */,
 				329FE19C258D7B0000E78E35 /* SceneDelegate.swift in Sources */,
 			);
