@@ -23,9 +23,9 @@ struct Section: Codable {
     let sectionNumber: String
     let sectionTitle: String
     let sectionContent: String
-    let imageID: String
-    let sectionPageNumbers: String
-    let subsections: [Subsection]
+    let imageID: String?
+    let sectionPageNumbers: String?
+    let subsections: [Subsection]?
     
     enum CodingKeys: String, CodingKey {
         case sectionNumber = "section_number"
@@ -38,10 +38,10 @@ struct Section: Codable {
 }
 
 struct Subsection: Codable {
-    let subsectionTitle: String
-    let subsectionContent: String
-    let subsectionImageID: String
-    let subsectionPageNumbers: String
+    let subsectionTitle: String?
+    let subsectionContent: String?
+    let subsectionImageID: String?
+    let subsectionPageNumbers: String?
     
     enum CodingKeys: String, CodingKey {
         case subsectionTitle = "subsection_title"
