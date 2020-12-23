@@ -3,22 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3222220C2592E5FF005BCAA6 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222220B2592E5FF005BCAA6 /* ContainerViewController.swift */; };
 		329FE19A258D7B0000E78E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE199258D7B0000E78E35 /* AppDelegate.swift */; };
 		329FE19C258D7B0000E78E35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE19B258D7B0000E78E35 /* SceneDelegate.swift */; };
-		329FE19E258D7B0000E78E35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE19D258D7B0000E78E35 /* ViewController.swift */; };
-		329FE1A1258D7B0000E78E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329FE19F258D7B0000E78E35 /* Main.storyboard */; };
+		329FE19E258D7B0000E78E35 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE19D258D7B0000E78E35 /* DisplayViewController.swift */; };
+		329FE1A1258D7B0000E78E35 /* MainDisplay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329FE19F258D7B0000E78E35 /* MainDisplay.storyboard */; };
 		329FE1A3258D7B0100E78E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 329FE1A2258D7B0100E78E35 /* Assets.xcassets */; };
 		329FE1A6258D7B0100E78E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329FE1A4258D7B0100E78E35 /* LaunchScreen.storyboard */; };
 		329FE1B1258D7B0100E78E35 /* Dot98Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1B0258D7B0100E78E35 /* Dot98Tests.swift */; };
 		329FE1BC258D7B0100E78E35 /* Dot98UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1BB258D7B0100E78E35 /* Dot98UITests.swift */; };
 		329FE1CD258D7B3100E78E35 /* chapter1.json in Resources */ = {isa = PBXBuildFile; fileRef = 329FE1CC258D7B3100E78E35 /* chapter1.json */; };
 		329FE1DE258D7C1300E78E35 /* ChapterOneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1DD258D7C1300E78E35 /* ChapterOneModel.swift */; };
-		329FE1EE258D840500E78E35 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 329FE1ED258D840500E78E35 /* SideMenu */; };
-		329FE1F4258D876700E78E35 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329FE1F2258D876700E78E35 /* SideMenu.storyboard */; };
 		329FE1FC258D886E00E78E35 /* ChapterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE1FB258D886E00E78E35 /* ChapterController.swift */; };
 		329FE207258D8B1C00E78E35 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE206258D8B1C00E78E35 /* SideMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -41,11 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3222220B2592E5FF005BCAA6 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		329FE196258D7B0000E78E35 /* Dot98.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dot98.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		329FE199258D7B0000E78E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		329FE19B258D7B0000E78E35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		329FE19D258D7B0000E78E35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		329FE1A0258D7B0000E78E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		329FE19D258D7B0000E78E35 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		329FE1A0258D7B0000E78E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainDisplay.storyboard; sourceTree = "<group>"; };
 		329FE1A2258D7B0100E78E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		329FE1A5258D7B0100E78E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		329FE1A7258D7B0100E78E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +57,6 @@
 		329FE1BD258D7B0100E78E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		329FE1CC258D7B3100E78E35 /* chapter1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chapter1.json; sourceTree = "<group>"; };
 		329FE1DD258D7C1300E78E35 /* ChapterOneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterOneModel.swift; sourceTree = "<group>"; };
-		329FE1F3258D876700E78E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Dot98/Storyboards/Base.lproj/SideMenu.storyboard; sourceTree = "<group>"; };
 		329FE1FB258D886E00E78E35 /* ChapterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterController.swift; sourceTree = "<group>"; };
 		329FE206258D8B1C00E78E35 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329FE1EE258D840500E78E35 /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +159,7 @@
 		329FE1D6258D7B7F00E78E35 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				329FE19F258D7B0000E78E35 /* Main.storyboard */,
-				329FE1F2258D876700E78E35 /* SideMenu.storyboard */,
+				329FE19F258D7B0000E78E35 /* MainDisplay.storyboard */,
 				329FE1A4258D7B0100E78E35 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -179,8 +176,9 @@
 		329FE1E8258D82E400E78E35 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				329FE19D258D7B0000E78E35 /* ViewController.swift */,
+				329FE19D258D7B0000E78E35 /* DisplayViewController.swift */,
 				329FE206258D8B1C00E78E35 /* SideMenuTableViewController.swift */,
+				3222220B2592E5FF005BCAA6 /* ContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,7 +200,6 @@
 			);
 			name = Dot98;
 			packageProductDependencies = (
-				329FE1ED258D840500E78E35 /* SideMenu */,
 			);
 			productName = Dot98;
 			productReference = 329FE196258D7B0000E78E35 /* Dot98.app */;
@@ -276,7 +273,6 @@
 			);
 			mainGroup = 329FE18D258D7B0000E78E35;
 			packageReferences = (
-				329FE1EC258D840500E78E35 /* XCRemoteSwiftPackageReference "SideMenu" */,
 			);
 			productRefGroup = 329FE197258D7B0000E78E35 /* Products */;
 			projectDirPath = "";
@@ -295,10 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				329FE1A6258D7B0100E78E35 /* LaunchScreen.storyboard in Resources */,
-				329FE1F4258D876700E78E35 /* SideMenu.storyboard in Resources */,
 				329FE1CD258D7B3100E78E35 /* chapter1.json in Resources */,
 				329FE1A3258D7B0100E78E35 /* Assets.xcassets in Resources */,
-				329FE1A1258D7B0000E78E35 /* Main.storyboard in Resources */,
+				329FE1A1258D7B0000E78E35 /* MainDisplay.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329FE19E258D7B0000E78E35 /* ViewController.swift in Sources */,
+				329FE19E258D7B0000E78E35 /* DisplayViewController.swift in Sources */,
 				329FE207258D8B1C00E78E35 /* SideMenuTableViewController.swift in Sources */,
+				3222220C2592E5FF005BCAA6 /* ContainerViewController.swift in Sources */,
 				329FE1FC258D886E00E78E35 /* ChapterController.swift in Sources */,
 				329FE19A258D7B0000E78E35 /* AppDelegate.swift in Sources */,
 				329FE1DE258D7C1300E78E35 /* ChapterOneModel.swift in Sources */,
@@ -364,12 +360,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		329FE19F258D7B0000E78E35 /* Main.storyboard */ = {
+		329FE19F258D7B0000E78E35 /* MainDisplay.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				329FE1A0258D7B0000E78E35 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainDisplay.storyboard;
 			sourceTree = "<group>";
 		};
 		329FE1A4258D7B0100E78E35 /* LaunchScreen.storyboard */ = {
@@ -378,14 +374,6 @@
 				329FE1A5258D7B0100E78E35 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		329FE1F2258D876700E78E35 /* SideMenu.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				329FE1F3258D876700E78E35 /* Base */,
-			);
-			name = SideMenu.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -669,25 +657,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		329FE1EC258D840500E78E35 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jonkykong/SideMenu";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		329FE1ED258D840500E78E35 /* SideMenu */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 329FE1EC258D840500E78E35 /* XCRemoteSwiftPackageReference "SideMenu" */;
-			productName = SideMenu;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 329FE18E258D7B0000E78E35 /* Project object */;
 }
