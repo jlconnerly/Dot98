@@ -7,19 +7,26 @@
 
 import UIKit
 
+// MARK: - Protocols
+protocol SideMenuTableViewControllerDelegate {
+  func didSelectChapter(_ chapter: ChapterOne)
+}
+
 class SideMenuTableViewController: UIViewController {
     
-    @IBOutlet weak var chaptersTableView: UITableView!
+    // MARK: - IBOutlets & Properties
+    @IBOutlet weak var menuTableView: UITableView!
     
     var chapters: [ChapterOne] = []
+    var delegate: SideMenuTableViewControllerDelegate?
 
     let chapterController = ChapterController()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chaptersTableView.delegate = self
-        chaptersTableView.dataSource = self
+        menuTableView.delegate = self
+        menuTableView.dataSource = self
         loadChapters()
     }
     
@@ -28,7 +35,7 @@ class SideMenuTableViewController: UIViewController {
             guard let chapter = try? result.get() else { return }
             self.chapters.append(chapter)
             DispatchQueue.main.async {
-                self.chaptersTableView.reloadData()
+                self.menuTableView.reloadData()
             }
         }
     }
@@ -50,7 +57,7 @@ extension SideMenuTableViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChapterCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TVCell", for: indexPath)
         cell.textLabel?.text = "Chapter \(chapters[indexPath.row].chapterNumber): \(chapters[indexPath.row].chapterTitle)"
         return cell
     }
