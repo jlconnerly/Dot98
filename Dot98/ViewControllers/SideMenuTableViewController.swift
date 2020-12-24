@@ -7,9 +7,8 @@
 
 import UIKit
 
-// MARK: - Protocols
-protocol SideMenuTableViewControllerDelegate {
-  func didSelectChapter(_ chapter: ChapterOne)
+protocol SideMenuDelegate {
+    func didSelectChapter(_ chapter: ChapterOne)
 }
 
 class SideMenuTableViewController: UIViewController {
@@ -18,10 +17,8 @@ class SideMenuTableViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     
     var chapters: [ChapterOne] = []
-    var delegate: SideMenuTableViewControllerDelegate?
-
     let chapterController = ChapterController()
-    
+    var delegate: SideMenuDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,5 +59,21 @@ extension SideMenuTableViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let mainStoryboard = UIStoryboard(name: "MainDisplay", bundle: Bundle.main)
+//        guard let sectionsVC = mainStoryboard.instantiateViewController(identifier: "SectionsViewController") as? SectionsViewController else { return }
+//        sectionsVC.sections = chapters[indexPath.row].sections
+//        view.addSubview(sectionsVC.view)
+        let chapter = chapters[indexPath.row]
+        delegate?.didSelectChapter(chapter)
+    }
+}
+
+// MARK: - Storyboard Extension
+private extension UIStoryboard {
+  static func mainDisplayStoryboard() -> UIStoryboard { return UIStoryboard(name: "MainDisplay", bundle: Bundle.main) }
+  
+  static func menuViewController() -> SideMenuTableViewController? {
+    return mainDisplayStoryboard().instantiateViewController(withIdentifier: "SideMenuTableViewController") as? SideMenuTableViewController
+  }
 }

@@ -28,12 +28,4 @@ class DisplayViewController: UIViewController {
     @IBAction func menuButtonTapped(_ sender: UIBarButtonItem) {
         delegate?.toggleMenuPanel()
     }
-    
-}
-extension DisplayViewController: SideMenuTableViewControllerDelegate {
-    func didSelectChapter(_ chapter: ChapterOne) {
-        
-    }
-    
-    
 }

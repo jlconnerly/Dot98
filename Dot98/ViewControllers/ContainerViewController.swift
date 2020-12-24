@@ -13,7 +13,9 @@ class ContainerViewController: UIViewController {
     // MARK: - IBOutlets & Properties
     var displayNavigationController: UINavigationController!
     var displayViewController: DisplayViewController!
-    var menuTableViewController: SideMenuTableViewController?
+    var menuTableViewController: SideMenuTableViewController!
+    var sectionsTableViewController: SectionsViewController!
+    var menuNavController: UINavigationController!
     let menuExpandedOffset: CGFloat = 90
     var isMenuDisplayed = false {
         didSet {
@@ -86,16 +88,19 @@ extension ContainerViewController: DisplayViewControllerDelegate {
         guard menuTableViewController == nil else { return }
         if let vc = UIStoryboard.menuViewController() {
             //vc.animals = Animal.allCats()
-            addChildMenuPanelController(vc)
+            vc.delegate = self
+            menuNavController = UINavigationController(rootViewController: vc)
+            view.addSubview(menuNavController.view)
+            addChildMenuPanelController(menuNavController)
             menuTableViewController = vc
         }
     }
     
-    func addChildMenuPanelController(_ menuPanelController: SideMenuTableViewController) {
+    func addChildMenuPanelController(_ menuPanelController: UINavigationController) {
         view.insertSubview(menuPanelController.view, at: 0)
         addChild(menuPanelController)
-        menuPanelController.didMove(toParent: self)
-        menuPanelController.delegate = displayViewController
+        //menuPanelController.didMove(toParent: self)
+        //menuPanelController.delegate = displayViewController
     }
     
     func animateMenuPanel(shouldExpand: Bool) {
@@ -157,13 +162,31 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
 
 // MARK: - Storyboard Extension
 private extension UIStoryboard {
-  static func mainDisplayStoryboard() -> UIStoryboard { return UIStoryboard(name: "MainDisplay", bundle: Bundle.main) }
-  
-  static func menuViewController() -> SideMenuTableViewController? {
-    return mainDisplayStoryboard().instantiateViewController(withIdentifier: "SideMenuTableViewController") as? SideMenuTableViewController
-  }
-  
-  static func displayViewController() -> DisplayViewController? {
-    return mainDisplayStoryboard().instantiateViewController(withIdentifier: "DisplayViewController") as? DisplayViewController
-  }
+    static func mainDisplayStoryboard() -> UIStoryboard { return UIStoryboard(name: "MainDisplay", bundle: Bundle.main) }
+    
+    static func menuViewController() -> SideMenuTableViewController? {
+        return mainDisplayStoryboard().instantiateViewController(withIdentifier: "SideMenuTableViewController") as? SideMenuTableViewController
+    }
+    
+    static func displayViewController() -> DisplayViewController? {
+        return mainDisplayStoryboard().instantiateViewController(withIdentifier: "DisplayViewController") as? DisplayViewController
+    }
+    
+    static func sectionViewController() -> SectionsViewController? {
+        return mainDisplayStoryboard().instantiateViewController(withIdentifier: "SectionsViewController") as? SectionsViewController
+    }
+}
+
+extension ContainerViewController: SideMenuDelegate {
+    func didSelectChapter(_ chapter: ChapterOne) {
+        sectionsTableViewController = UIStoryboard.sectionViewController()
+        guard sectionsTableViewController != nil,
+              sectionsTableViewController.sectionsTableView != nil else { return }
+        
+        sectionsTableViewController.sections = chapter.sections
+        menuNavController.pushViewController(sectionsTableViewController, animated: true)
+        
+    }
+    
+    
 }

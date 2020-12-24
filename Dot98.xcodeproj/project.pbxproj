@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322122682594375400C9EA20 /* SectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322122672594375400C9EA20 /* SectionsViewController.swift */; };
 		3222220C2592E5FF005BCAA6 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222220B2592E5FF005BCAA6 /* ContainerViewController.swift */; };
 		329FE19A258D7B0000E78E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE199258D7B0000E78E35 /* AppDelegate.swift */; };
 		329FE19C258D7B0000E78E35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329FE19B258D7B0000E78E35 /* SceneDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		322122672594375400C9EA20 /* SectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsViewController.swift; sourceTree = "<group>"; };
 		3222220B2592E5FF005BCAA6 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		329FE196258D7B0000E78E35 /* Dot98.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dot98.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		329FE199258D7B0000E78E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				329FE19D258D7B0000E78E35 /* DisplayViewController.swift */,
 				329FE206258D8B1C00E78E35 /* SideMenuTableViewController.swift */,
 				3222220B2592E5FF005BCAA6 /* ContainerViewController.swift */,
+				322122672594375400C9EA20 /* SectionsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				329FE1FC258D886E00E78E35 /* ChapterController.swift in Sources */,
 				329FE19A258D7B0000E78E35 /* AppDelegate.swift in Sources */,
 				329FE1DE258D7C1300E78E35 /* ChapterOneModel.swift in Sources */,
+				322122682594375400C9EA20 /* SectionsViewController.swift in Sources */,
 				329FE19C258D7B0000E78E35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
